@@ -651,10 +651,10 @@
             letter-spacing: -0.72px;
         }
     }
-    @media (min-width: 1440px) and(max-width: 1919px) {
-        .gnQQsR {
-            font-size: 44px;
-            line-height: 52px;
+    @media (min-width: 1440px) and (max-width: 1919px) {
+    .gnQQsR {
+            font-size: 60px; /* Increased from 44px */
+            line-height: 68px; /* Increased from 52px */
             -webkit-letter-spacing: -0.88px;
             -moz-letter-spacing: -0.88px;
             -ms-letter-spacing: -0.88px;
@@ -1481,6 +1481,78 @@
         font-size: 12px;
     }
 
+    /* Footer Styles - Add this to your <style> tag */
+    .site-footer {
+        background-color: #f0f0f8;
+        color: #333;
+        padding: 50px 64px;
+        font-family: -apple-system, 'Helvetica Neue', sans-serif, 'Mier Book';
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        max-width: 1328px;
+        margin: 0 auto;
+    }
+
+    .footer-column h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .footer-column a {
+        display: block;
+        color: #555;
+        text-decoration: none;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .footer-column a:hover {
+        text-decoration: underline;
+    }
+
+    .app-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .app-buttons img {
+        width: 150px;
+        height: auto;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-info p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
     </style>
 </head>
 <body>
@@ -1687,7 +1759,7 @@
                     <h2>Products For You</h2>
                     <div class="product-grid">
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/44626961/o7u1j_512.webp" alt="Voguish Saree">
+                            <img class="product-image" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=360" alt="Voguish Saree">
                             <div class="product-info">
                                 <p class="product-title">Aagyeyi Voguish Sarees</p>
                                 <div class="product-price">
@@ -1704,7 +1776,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/43265809/kyyvo_512.webp" alt="Women Kurta">
+                            <img class="product-image" src="https://images.meesho.com/images/products/556144731/85wvr_512.avif?width=360" alt="Women Kurta">
                             <div class="product-info">
                                 <p class="product-title">Jivika Voguish Women Kurta</p>
                                 <div class="product-price">
@@ -1721,7 +1793,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/100418146/agx2f_512.webp" alt="Boys Top & Bottom">
+                            <img class="product-image" src="https://images.meesho.com/images/products/452992337/s0yyz_512.avif?width=360" alt="Boys Top & Bottom">
                             <div class="product-info">
                                 <p class="product-title">Tinkle Comfy Boys Top & Bottom</p>
                                 <div class="product-price">
@@ -1738,7 +1810,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/128362548/rbt2l_512.webp" alt="Dupatta Sets">
+                            <img class="product-image" src="https://images.meesho.com/images/products/388376694/ytqjs_512.avif?width=360" alt="Dupatta Sets">
                             <div class="product-info">
                                 <p class="product-title">New Trendy Dupatta Sets</p>
                                 <div class="product-price">
@@ -1755,7 +1827,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/93723659/focbn_512.webp" alt="Women Printed Kurti">
+                            <img class="product-image" src="https://images.meesho.com/images/products/534893805/gtvrd_512.avif?width=360" alt="Women Printed Kurti">
                             <div class="product-info">
                                 <p class="product-title">Aishani Graceful Kurtis</p>
                                 <div class="product-price">
@@ -1772,7 +1844,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/295980039/z382r_512.webp" alt="Men's T-shirt">
+                            <img class="product-image" src="https://images.meesho.com/images/products/393813075/dos6x_512.avif?width=360" alt="Men's T-shirt">
                             <div class="product-info">
                                 <p class="product-title">Urbane Men's Tshirts</p>
                                 <div class="product-price">
@@ -1789,7 +1861,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/177994862/e660p_512.webp" alt="Kids Clothing Set">
+                            <img class="product-image" src="https://images.meesho.com/images/products/441853401/dgv4n_512.avif?width=360" alt="Kids Clothing Set">
                             <div class="product-info">
                                 <p class="product-title">Modern Stylus Girls Clothing Set</p>
                                 <div class="product-price">
@@ -1806,7 +1878,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/397193231/6f2kl_512.webp" alt="Men's Casual Shirt">
+                            <img class="product-image" src="https://images.meesho.com/images/products/385074949/lydjc_512.avif?width=360" alt="Men's Casual Shirt">
                             <div class="product-info">
                                 <p class="product-title">Comfy Men's Casual Shirt</p>
                                 <div class="product-price">
@@ -1823,7 +1895,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/286289297/zmxvu_512.webp" alt="Stylish Watch">
+                            <img class="product-image" src="https://images.meesho.com/images/products/530562811/4zp30_512.avif?width=360" alt="Stylish Watch">
                             <div class="product-info">
                                 <p class="product-title">Analog Watches</p>
                                 <div class="product-price">
@@ -1840,7 +1912,7 @@
                         </div>
 
                         <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/147618997/7vfpn_512.webp" alt="Bluetooth Headphones">
+                            <img class="product-image" src="https://images.meesho.com/images/products/523788874/akyeh_512.avif?width=360" alt="Bluetooth Headphones">
                             <div class="product-info">
                                 <p class="product-title">Modern Bluetooth Headphones</p>
                                 <div class="product-price">
@@ -1858,11 +1930,60 @@
 
                     </div>
                 </section>
+
             </div>
             <div class="sc-gswNZR sc-hLBbgP JoMRc etQEgJ">
                 <div class="sc-dkrFOg dcFbbj"></div>
             </div>
         </div>
     </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2>Shop Non-Stop on Meesho</h2>
+                <p>Trusted by crores of Indians</p>
+                <p>Cash on Delivery | Free Delivery</p>
+                <div class="app-buttons">
+                    <a href="#"><img src="https://images.meesho.com/images/pow/playstore-icon-big.png" alt="Get it on Google Play"></a>
+                    <a href="#"><img src="https://images.meesho.com/images/pow/appstore-icon-big.png" alt="Available on the App Store"></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Careers</h3>
+                <a href="#">Become a supplier</a>
+                <a href="#">Hall of Fame</a>
+                <a href="#">Sitemap</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal and Policies</h3>
+                <a href="#">Meesho Tech Blog</a>
+                <a href="#">Notices and Returns</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Reach out to us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://images.meesho.com/images/pow/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://images.meesho.com/images/pow/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://images.meesho.com/images/pow/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="https://images.meesho.com/images/pow/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://images.meesho.com/images/pow/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p>
+                    Meesho Technologies Private Limited<br>
+                    CIN: U52300KA2015PTC082283<br>
+                    3rd Floor, Wing-E, Helios Business Park, Kadubeesanahalli Village, Varthur Hobli, Outer Ring Road Bellandur, Bangalore, Bangalore South, Karnataka, India, 560103<br>
+                    E-mail address: query@meesho.com<br>
+                    © 2015-2025 Meesho.com
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
