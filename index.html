@@ -1553,6 +1553,169 @@
         line-height: 1.5;
     }
 
+    
+    /* UPDATED Product Detail Page Styles */
+    .product-detail-container {
+        max-width: 1200px;
+        margin: 20px auto 40px;
+        padding: 0 64px;
+        display: flex;
+        gap: 40px;
+        font-family: -apple-system, 'Helvetica Neue', sans-serif, 'Mier Book';
+    }
+    .product-image-gallery {
+        flex: 1.2;
+        display: flex;
+        gap: 15px;
+    }
+    .thumbnail-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .thumbnail-image {
+        width: 60px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 2px solid #eee;
+        cursor: pointer;
+        transition: border-color 0.2s;
+    }
+    .thumbnail-image:hover, .thumbnail-image.active {
+        border-color: #9f2089;
+    }
+    .main-image-column {
+        flex: 1;
+    }
+    .main-product-image {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #eee;
+    }
+    .product-details-content {
+        flex: 1;
+    }
+    .product-details-content h1 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 12px;
+        color: #555;
+    }
+    .product-price-section {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+    .product-details-price {
+        font-size: 28px;
+        font-weight: bold;
+        color: #000;
+    }
+    .product-original-price {
+        font-size: 16px;
+        color: #888;
+        text-decoration: line-through;
+    }
+    .product-discount {
+        font-size: 18px;
+        color: #038d63;
+        font-weight: 600;
+    }
+    .product-details-rating {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        padding: 6px 12px;
+        margin-bottom: 20px;
+        width: fit-content;
+    }
+    .details-rating-value {
+        font-weight: bold;
+        color: #038d63;
+        font-size: 16px;
+        margin-right: 8px;
+    }
+    .details-reviews-count {
+        color: #777;
+        font-size: 14px;
+    }
+    .size-selector {
+        margin-top: 25px;
+    }
+    .size-selector h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .size-btn {
+        padding: 8px 16px;
+        border: 2px solid #ddd;
+        border-radius: 20px;
+        background-color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .size-btn.active {
+        border-color: #9f2089;
+        color: #9f2089;
+    }
+    .product-description-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+    .product-description-text p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #666;
+        margin: 5px 0;
+    }
+    .product-actions {
+        margin-top: 30px;
+        display: flex;
+        gap: 15px;
+    }
+    .action-btn {
+        flex: 1;
+        padding: 15px 20px;
+        border: 2px solid;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .add-to-cart-btn {
+        background-color: #fff;
+        color: #9f2089;
+        border-color: #9f2089;
+    }
+    .buy-now-btn {
+        background-color: #9f2089;
+        color: #fff;
+        border-color: #9f2089;
+    }
+    .add-to-cart-btn:hover { background-color: #fdf4ff; }
+    .buy-now-btn:hover { background-color: #7d196c; border-color: #7d196c; }
+    .back-to-home-btn {
+        display: inline-block;
+        margin: 0px 64px 20px;
+        padding: 10px 20px;
+        background-color: #f0f0f8;
+        color: #333;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
     </style>
 </head>
 <body>
@@ -1613,331 +1776,388 @@
             <div class="sc-gKPRtg biTaEv"></div>
         </div>
         <div class="sc-bcXHqe Desktop__PageContentContainer-sc-19e6gnr-0 cppHWG incPd">
-            <div class="styles__HomePageWrapper-sc-2pt7ax-0 XeBWn">
-                <section class="Herosectionstyled__HeroSection-sc-154l2i1-0 gwgFKX">
-                    <img alt="Smart Shopping" fetchpriority="high" loading="eager" width="1920" height="534" decoding="async" data-nimg="1" style="color:transparent;width:100%;height:auto;display:block" src="https://images.meesho.com/images/marketing/1757490578069.webp"/>
-                    <div class="Herosectionstyled__HeroSectionContent-sc-154l2i1-1 eLxuyt">
-                        <div class="Herosectionstyled__StyledHeroSectionCaption-sc-154l2i1-4 fNsBRo">
-                            <div class="Herosectionstyled__HeroSectionTitle-sc-154l2i1-2 gnQQsR">Smart Shopping</div>
-                            <div class="Herosectionstyled__HeroSectionTitle-sc-154l2i1-2 gnQQsR">Trusted by Millions</div>
-                        </div>
-                        <div class="Herosectionstyled__HeroSectionShopNow-sc-154l2i1-3 cxXWHx">Shop Now</div>
-                    </div>
-                </section>
-                <section class="styles__FeaturesSectionWrapper-sc-2pt7ax-3 joyQDx">
-                    <div class="styles__FeaturesSection-sc-2pt7ax-4 eRqqQK">
-                        <div class="styles__FeatureItem-sc-2pt7ax-5 kwIMZc">
-                            <img src="https://www.meesho.com/assets/Icons/returns.svg" alt="7 Days Easy Return" class="styles__FeatureIcon-sc-2pt7ax-6 kzhBoo"/>
-                            <span class="styles__FeatureText-sc-2pt7ax-7 bXOsoB">7 Days Easy Return</span>
-                        </div>
-                        <div class="styles__FeatureItem-sc-2pt7ax-5 kwIMZc">
-                            <img src="https://www.meesho.com/assets/Icons/cod.svg" alt="Cash on Delivery" class="styles__FeatureIcon-sc-2pt7ax-6 kzhBoo"/>
-                            <span class="styles__FeatureText-sc-2pt7ax-7 bXOsoB">Cash on Delivery</span>
-                        </div>
-                        <div class="styles__FeatureItem-sc-2pt7ax-5 kwIMZc">
-                            <img src="https://www.meesho.com/assets/Icons/lowest-price.svg" alt="Lowest Prices" class="styles__FeatureIcon-sc-2pt7ax-6 kzhBoo"/>
-                            <span class="styles__FeatureText-sc-2pt7ax-7 bXOsoB">Lowest Prices</span>
-                        </div>
-                    </div>
-                </section>
-                <section class="CategorySectionstyled__CategorySection-sc-1crvw74-4 bHdYpZ">
-                    <div class="CategorySectionstyled__CategoryGrid-sc-1crvw74-5 kxHJQQ">
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189302519.webp" alt="Kurtis" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189349962.webp" alt="Men Fashion" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189394066.webp" alt="Kids" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189448637.webp" alt="Footwear" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189484873.webp" alt="Home & Kitchen" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189541871.webp" alt="Beauty" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189570549.webp" alt="Saree & Lehenga" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189631621.webp" alt="WWW" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189724359.webp" alt="Accessories" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189770366.webp" alt="Jewellery" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189810046.webp" alt="Mall" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                        <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
-                            <img src="https://images.meesho.com/images/marketing/1758189895175.webp" alt="Electronics" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
-                        </a>
-                    </div>
-                </section>
-                <section class="GoldSectionstyled__GoldSection-sc-13s89ix-0 krLGAJ">
-                    <img src="https://images.meesho.com/images/marketing/1744698265981.webp" class="GoldSectionstyled__GoldBackground-sc-13s89ix-1 diiUzF"/>
-                    <div class="GoldSectionstyled__GoldLeftContent-sc-13s89ix-3 icHRf">
-                        <a class="GoldSectionstyled__GoldButton-sc-13s89ix-7 dXSZqx" href="#">Shop Now</a>
-                    </div>
-                    <div class="GoldSectionstyled__GoldGrid-sc-13s89ix-8 gKjId">
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
-                            <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
-                                <img src="https://images.meesho.com/images/marketing/1744722796811.webp" alt="Lehenga" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
+            <div id="homePage">
+                <div class="styles__HomePageWrapper-sc-2pt7ax-0 XeBWn">
+                    <section class="Herosectionstyled__HeroSection-sc-154l2i1-0 gwgFKX">
+                        <img alt="Smart Shopping" fetchpriority="high" loading="eager" width="1920" height="534" decoding="async" data-nimg="1" style="color:transparent;width:100%;height:auto;display:block" src="https://images.meesho.com/images/marketing/1757490578069.webp"/>
+                        <div class="Herosectionstyled__HeroSectionContent-sc-154l2i1-1 eLxuyt">
+                            <div class="Herosectionstyled__StyledHeroSectionCaption-sc-154l2i1-4 fNsBRo">
+                                <div class="Herosectionstyled__HeroSectionTitle-sc-154l2i1-2 gnQQsR">Smart Shopping</div>
+                                <div class="Herosectionstyled__HeroSectionTitle-sc-154l2i1-2 gnQQsR">Trusted by Millions</div>
                             </div>
-                        </a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
-                            <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
-                                <img src="https://images.meesho.com/images/marketing/1744635113661.webp" alt="Menwear" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
-                            </div>
-                        </a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
-                            <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
-                                <img src="https://images.meesho.com/images/marketing/1744635139351.webp" alt="Sarees" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
-                            </div>
-                        </a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
-                            <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
-                                <img src="https://images.meesho.com/images/marketing/1744635189897.webp" alt="Jewellery" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-                <section class="BrandsSectionstyled__BrandsSection-sc-uzokkb-3 jlIfrQ">
-                    <div class="BrandsSectionstyled__BrandsSectionHeader-sc-uzokkb-0 ecJeAL">
-                        <div class="BrandsSectionstyled__BrandTitle-sc-uzokkb-1 kMPZlB">
-                            Original Brands 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" iconSize="32" class="sc-ftTHYK gBDqal">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.543 1.188A1.699 1.699 0 0 0 21.14.192l-4.357 2.264a1.699 1.699 0 0 1-1.566 0L10.86.192a1.699 1.699 0 0 0-2.403.996l-1.48 4.681c-.167.528-.58.941-1.108 1.108l-4.681 1.48a1.699 1.699 0 0 0-.996 2.403l2.264 4.357a1.699 1.699 0 0 1 0 1.566L.192 21.14a1.699 1.699 0 0 0 .996 2.403l4.681 1.48c.528.167.941.58 1.108 1.108l1.48 4.681a1.699 1.699 0 0 0 2.403.996l4.357-2.264a1.699 1.699 0 0 1 1.566 0l4.357 2.264c.936.486 2.085.01 2.403-.995l1.48-4.682c.167-.528.58-.941 1.108-1.108l4.681-1.48a1.699 1.699 0 0 0 .996-2.403l-2.264-4.357a1.699 1.699 0 0 1 0-1.566l2.264-4.357a1.699 1.699 0 0 0-.995-2.403l-4.682-1.48a1.699 1.699 0 0 1-1.108-1.108l-1.48-4.681ZM7.737 15.199c.815-.815 1.724-1.226 2.54-.411l3.854 3.855 7.807-7.807c.815-.815 1.708-.387 2.523.428.815.815 1.272 1.68.457 2.495l-9.28 9.28c-1.086 1.086-2.01 1.004-3.096-.083L7.325 17.74c-.815-.815-.403-1.724.412-2.54Z" fill="#6625FF"></path>
-                            </svg>
+                            <div class="Herosectionstyled__HeroSectionShopNow-sc-154l2i1-3 cxXWHx">Shop Now</div>
                         </div>
-                        <a class="BrandsSectionstyled__ViewAllLink-sc-uzokkb-2 gLQVpV" href="#">
-                            VIEW ALL
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="BrandsSectionstyled__BrandsSlider-sc-uzokkb-4 itgDvI brands-slider-1">
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758186849665.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758188159701.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758186984378.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758187027508.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758187069141.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758187096687.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
-                    </div>
-                </section>
-                <div class="styles__PopularBrandsSection-sc-2pt7ax-9 bPBijl">
-                    <div class="styles__MarqueeWrapper-sc-2pt7ax-10 cUpdYC">
-                        <div class="styles__MarqueeTrack-sc-2pt7ax-11 jOtMYQ">
-                            <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159302944.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
-                            <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159322237.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
-                            <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159363205.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
-                            <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159377598.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
-                            <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159393231.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
-                            <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159415385.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
-                            <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1744636558884.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                    </section>
+                    <section class="styles__FeaturesSectionWrapper-sc-2pt7ax-3 joyQDx">
+                        <div class="styles__FeaturesSection-sc-2pt7ax-4 eRqqQK">
+                            <div class="styles__FeatureItem-sc-2pt7ax-5 kwIMZc">
+                                <img src="https://www.meesho.com/assets/Icons/returns.svg" alt="7 Days Easy Return" class="styles__FeatureIcon-sc-2pt7ax-6 kzhBoo"/>
+                                <span class="styles__FeatureText-sc-2pt7ax-7 bXOsoB">7 Days Easy Return</span>
+                            </div>
+                            <div class="styles__FeatureItem-sc-2pt7ax-5 kwIMZc">
+                                <img src="https://www.meesho.com/assets/Icons/cod.svg" alt="Cash on Delivery" class="styles__FeatureIcon-sc-2pt7ax-6 kzhBoo"/>
+                                <span class="styles__FeatureText-sc-2pt7ax-7 bXOsoB">Cash on Delivery</span>
+                            </div>
+                            <div class="styles__FeatureItem-sc-2pt7ax-5 kwIMZc">
+                                <img src="https://www.meesho.com/assets/Icons/lowest-price.svg" alt="Lowest Prices" class="styles__FeatureIcon-sc-2pt7ax-6 kzhBoo"/>
+                                <span class="styles__FeatureText-sc-2pt7ax-7 bXOsoB">Lowest Prices</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="CategorySectionstyled__CategorySection-sc-1crvw74-4 bHdYpZ">
+                        <div class="CategorySectionstyled__CategoryGrid-sc-1crvw74-5 kxHJQQ">
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189302519.webp" alt="Kurtis" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189349962.webp" alt="Men Fashion" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189394066.webp" alt="Kids" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189448637.webp" alt="Footwear" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189484873.webp" alt="Home & Kitchen" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189541871.webp" alt="Beauty" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189570549.webp" alt="Saree & Lehenga" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189631621.webp" alt="WWW" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189724359.webp" alt="Accessories" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189770366.webp" alt="Jewellery" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189810046.webp" alt="Mall" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                            <a class="CategorySectionstyled__CardWrapper-sc-1crvw74-3 dlJGyL" href="#">
+                                <img src="https://images.meesho.com/images/marketing/1758189895175.webp" alt="Electronics" class="CategorySectionstyled__CardImageSale-sc-1crvw74-1 hTyRRA"/>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="GoldSectionstyled__GoldSection-sc-13s89ix-0 krLGAJ">
+                        <img src="https://images.meesho.com/images/marketing/1744698265981.webp" class="GoldSectionstyled__GoldBackground-sc-13s89ix-1 diiUzF"/>
+                        <div class="GoldSectionstyled__GoldLeftContent-sc-13s89ix-3 icHRf">
+                            <a class="GoldSectionstyled__GoldButton-sc-13s89ix-7 dXSZqx" href="#">Shop Now</a>
+                        </div>
+                        <div class="GoldSectionstyled__GoldGrid-sc-13s89ix-8 gKjId">
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
+                                <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
+                                    <img src="https://images.meesho.com/images/marketing/1744722796811.webp" alt="Lehenga" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
+                                </div>
+                            </a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
+                                <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
+                                    <img src="https://images.meesho.com/images/marketing/1744635113661.webp" alt="Menwear" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
+                                </div>
+                            </a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
+                                <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
+                                    <img src="https://images.meesho.com/images/marketing/1744635139351.webp" alt="Sarees" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
+                                </div>
+                            </a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#">
+                                <div class="GoldSectionstyled__GoldCardWrapper-sc-13s89ix-9 hZzBBv">
+                                    <img src="https://images.meesho.com/images/marketing/1744635189897.webp" alt="Jewellery" class="GoldSectionstyled__GoldCardImage-sc-13s89ix-10 kfWRQF"/>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="BrandsSectionstyled__BrandsSection-sc-uzokkb-3 jlIfrQ">
+                        <div class="BrandsSectionstyled__BrandsSectionHeader-sc-uzokkb-0 ecJeAL">
+                            <div class="BrandsSectionstyled__BrandTitle-sc-uzokkb-1 kMPZlB">
+                                Original Brands 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" iconSize="32" class="sc-ftTHYK gBDqal">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.543 1.188A1.699 1.699 0 0 0 21.14.192l-4.357 2.264a1.699 1.699 0 0 1-1.566 0L10.86.192a1.699 1.699 0 0 0-2.403.996l-1.48 4.681c-.167.528-.58.941-1.108 1.108l-4.681 1.48a1.699 1.699 0 0 0-.996 2.403l2.264 4.357a1.699 1.699 0 0 1 0 1.566L.192 21.14a1.699 1.699 0 0 0 .996 2.403l4.681 1.48c.528.167.941.58 1.108 1.108l1.48 4.681a1.699 1.699 0 0 0 2.403.996l4.357-2.264a1.699 1.699 0 0 1 1.566 0l4.357 2.264c.936.486 2.085.01 2.403-.995l1.48-4.682c.167-.528.58-.941 1.108-1.108l4.681-1.48a1.699 1.699 0 0 0 .996-2.403l-2.264-4.357a1.699 1.699 0 0 1 0-1.566l2.264-4.357a1.699 1.699 0 0 0-.995-2.403l-4.682-1.48a1.699 1.699 0 0 1-1.108-1.108l-1.48-4.681ZM7.737 15.199c.815-.815 1.724-1.226 2.54-.411l3.854 3.855 7.807-7.807c.815-.815 1.708-.387 2.523.428.815.815 1.272 1.68.457 2.495l-9.28 9.28c-1.086 1.086-2.01 1.004-3.096-.083L7.325 17.74c-.815-.815-.403-1.724.412-2.54Z" fill="#6625FF"></path>
+                                </svg>
+                            </div>
+                            <a class="BrandsSectionstyled__ViewAllLink-sc-uzokkb-2 gLQVpV" href="#">
+                                VIEW ALL
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="BrandsSectionstyled__BrandsSlider-sc-uzokkb-4 itgDvI brands-slider-1">
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758186849665.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758188159701.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758186984378.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758187027508.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758187069141.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="BrandsSectionstyled__BrandCard-sc-uzokkb-5 ZFkZo"><img src="https://images.meesho.com/images/marketing/1758187096687.webp" alt="Original Brands" class="BrandsSectionstyled__BrandImage-sc-uzokkb-6 kKQzVs"/></div></a>
+                        </div>
+                    </section>
+                    <div class="styles__PopularBrandsSection-sc-2pt7ax-9 bPBijl">
+                        <div class="styles__MarqueeWrapper-sc-2pt7ax-10 cUpdYC">
+                            <div class="styles__MarqueeTrack-sc-2pt7ax-11 jOtMYQ">
+                                <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159302944.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                                <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159322237.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                                <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159363205.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                                <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159377598.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                                <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159393231.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                                <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1743159415385.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                                <div class="styles__PopularBrandCard-sc-2pt7ax-12 gcOIzj"><img src="https://images.meesho.com/images/marketing/1744636558884.webp" alt="Popular Brands" class="styles__BrandLogo-sc-2pt7ax-13 lcJYyn"/></div>
+                            </div>
                         </div>
                     </div>
+                    <section class="TrendsSectionstyled__TrendsSection-sc-dt310q-0 dHjkpt">
+                        <img src="https://images.meesho.com/images/marketing/1758198865517.webp" class="TrendsSectionstyled__TrendsBackground-sc-dt310q-1 bKYKmr"/>
+                        <button class="TrendsSectionstyled__ShopNowButton-sc-dt310q-7 gjoiUg">Download Now</button>
+                        <div class="TrendsSectionstyled__TrendsGrid-sc-dt310q-8 bsyxtZ">
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199010986.webp" alt="Navratri" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Navratri</div></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199115364.webp" alt="Dussehra" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Dussehra</div></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199161935.webp" alt="Durga Pujo" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Durga Pujo</div></div></a>
+                            <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199197481.webp" alt="Diwali" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Diwali</div></div></a>
+                        </div>
+                    </section>
+                    <section class="product-section">
+                        <h2>Products For You</h2>
+                        <div class="product-grid">
+                            <!-- Product 1 -->
+                            <div class="product-card" id="sareeProduct">
+                                <img class="product-image" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=360" alt="Voguish Saree">
+                                <div class="product-info">
+                                    <p class="product-title">Banita Refined Sarees</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹330</span>
+                                        <span class="original-price">₹365</span>
+                                        <span class="discount">10% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">3.9 ⭐</span>
+                                        <span class="reviews-count">39310 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/556144731/85wvr_512.avif?width=360" alt="Women Kurta">
+                                <div class="product-info">
+                                    <p class="product-title">Jivika Voguish Women Kurta</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹337</span>
+                                        <span class="original-price">₹390</span>
+                                        <span class="discount">14% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">3.7 ⭐</span>
+                                        <span class="reviews-count">107097 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/452992337/s0yyz_512.avif?width=360" alt="Boys Top & Bottom">
+                                <div class="product-info">
+                                    <p class="product-title">Tinkle Comfy Boys Top & Bottom</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹153</span>
+                                        <span class="original-price">₹173</span>
+                                        <span class="discount">12% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">4.1 ⭐</span>
+                                        <span class="reviews-count">29127 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/388376694/ytqjs_512.avif?width=360" alt="Dupatta Sets">
+                                <div class="product-info">
+                                    <p class="product-title">New Trendy Dupatta Sets</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹372</span>
+                                        <span class="original-price">₹395</span>
+                                        <span class="discount">6% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">4.0 ⭐</span>
+                                        <span class="reviews-count">8504 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/534893805/gtvrd_512.avif?width=360" alt="Women Printed Kurti">
+                                <div class="product-info">
+                                    <p class="product-title">Aishani Graceful Kurtis</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹284</span>
+                                        <span class="original-price">₹320</span>
+                                        <span class="discount">11% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">3.8 ⭐</span>
+                                        <span class="reviews-count">54211 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/393813075/dos6x_512.avif?width=360" alt="Men's T-shirt">
+                                <div class="product-info">
+                                    <p class="product-title">Urbane Men's Tshirts</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹299</span>
+                                        <span class="original-price">₹340</span>
+                                        <span class="discount">12% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">4.2 ⭐</span>
+                                        <span class="reviews-count">1987 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/441853401/dgv4n_512.avif?width=360" alt="Kids Clothing Set">
+                                <div class="product-info">
+                                    <p class="product-title">Modern Stylus Girls Clothing Set</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹453</span>
+                                        <span class="original-price">₹510</span>
+                                        <span class="discount">11% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">4.3 ⭐</span>
+                                        <span class="reviews-count">12501 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/385074949/lydjc_512.avif?width=360" alt="Men's Casual Shirt">
+                                <div class="product-info">
+                                    <p class="product-title">Comfy Men's Casual Shirt</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹412</span>
+                                        <span class="original-price">₹465</span>
+                                        <span class="discount">11% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">3.9 ⭐</span>
+                                        <span class="reviews-count">4588 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/530562811/4zp30_512.avif?width=360" alt="Stylish Watch">
+                                <div class="product-info">
+                                    <p class="product-title">Analog Watches</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹175</span>
+                                        <span class="original-price">₹200</span>
+                                        <span class="discount">13% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">4.0 ⭐</span>
+                                        <span class="reviews-count">112045 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <img class="product-image" src="https://images.meesho.com/images/products/523788874/akyeh_512.avif?width=360" alt="Bluetooth Headphones">
+                                <div class="product-info">
+                                    <p class="product-title">Modern Bluetooth Headphones</p>
+                                    <div class="product-price">
+                                        <span class="current-price">₹380</span>
+                                        <span class="original-price">₹425</span>
+                                        <span class="discount">11% off</span>
+                                    </div>
+                                    <p class="free-delivery">Free Delivery</p>
+                                    <div class="product-rating">
+                                        <span class="rating-value">3.9 ⭐</span>
+                                        <span class="reviews-count">24589 Reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
                 </div>
-                <section class="TrendsSectionstyled__TrendsSection-sc-dt310q-0 dHjkpt">
-                    <img src="https://images.meesho.com/images/marketing/1758198865517.webp" class="TrendsSectionstyled__TrendsBackground-sc-dt310q-1 bKYKmr"/>
-                    <button class="TrendsSectionstyled__ShopNowButton-sc-dt310q-7 gjoiUg">Download Now</button>
-                    <div class="TrendsSectionstyled__TrendsGrid-sc-dt310q-8 bsyxtZ">
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199010986.webp" alt="Navratri" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Navratri</div></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199115364.webp" alt="Dussehra" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Dussehra</div></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199161935.webp" alt="Durga Pujo" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Durga Pujo</div></div></a>
-                        <a class="styles__StyledLink-sc-2pt7ax-8 iyKpdb" href="#"><div class="TrendsSectionstyled__TrendCard-sc-dt310q-9 bRTMat"><img src="https://images.meesho.com/images/marketing/1758199197481.webp" alt="Diwali" class="TrendsSectionstyled__TrendImage-sc-dt310q-10 dFrGwW"/><div class="TrendsSectionstyled__TrendImageCaption-sc-dt310q-11 dIPcj">Diwali</div></div></a>
-                    </div>
-                </section>
-                <section class="product-section">
-                    <h2>Products For You</h2>
-                    <div class="product-grid">
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=360" alt="Voguish Saree">
-                            <div class="product-info">
-                                <p class="product-title">Aagyeyi Voguish Sarees</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹330</span>
-                                    <span class="original-price">₹365</span>
-                                    <span class="discount">10% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">3.9 ⭐</span>
-                                    <span class="reviews-count">39310 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/556144731/85wvr_512.avif?width=360" alt="Women Kurta">
-                            <div class="product-info">
-                                <p class="product-title">Jivika Voguish Women Kurta</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹337</span>
-                                    <span class="original-price">₹390</span>
-                                    <span class="discount">14% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">3.7 ⭐</span>
-                                    <span class="reviews-count">107097 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/452992337/s0yyz_512.avif?width=360" alt="Boys Top & Bottom">
-                            <div class="product-info">
-                                <p class="product-title">Tinkle Comfy Boys Top & Bottom</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹153</span>
-                                    <span class="original-price">₹173</span>
-                                    <span class="discount">12% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">4.1 ⭐</span>
-                                    <span class="reviews-count">29127 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/388376694/ytqjs_512.avif?width=360" alt="Dupatta Sets">
-                            <div class="product-info">
-                                <p class="product-title">New Trendy Dupatta Sets</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹372</span>
-                                    <span class="original-price">₹395</span>
-                                    <span class="discount">6% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">4.0 ⭐</span>
-                                    <span class="reviews-count">8504 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/534893805/gtvrd_512.avif?width=360" alt="Women Printed Kurti">
-                            <div class="product-info">
-                                <p class="product-title">Aishani Graceful Kurtis</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹284</span>
-                                    <span class="original-price">₹320</span>
-                                    <span class="discount">11% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">3.8 ⭐</span>
-                                    <span class="reviews-count">54211 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/393813075/dos6x_512.avif?width=360" alt="Men's T-shirt">
-                            <div class="product-info">
-                                <p class="product-title">Urbane Men's Tshirts</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹299</span>
-                                    <span class="original-price">₹340</span>
-                                    <span class="discount">12% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">4.2 ⭐</span>
-                                    <span class="reviews-count">1987 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/441853401/dgv4n_512.avif?width=360" alt="Kids Clothing Set">
-                            <div class="product-info">
-                                <p class="product-title">Modern Stylus Girls Clothing Set</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹453</span>
-                                    <span class="original-price">₹510</span>
-                                    <span class="discount">11% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">4.3 ⭐</span>
-                                    <span class="reviews-count">12501 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/385074949/lydjc_512.avif?width=360" alt="Men's Casual Shirt">
-                            <div class="product-info">
-                                <p class="product-title">Comfy Men's Casual Shirt</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹412</span>
-                                    <span class="original-price">₹465</span>
-                                    <span class="discount">11% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">3.9 ⭐</span>
-                                    <span class="reviews-count">4588 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/530562811/4zp30_512.avif?width=360" alt="Stylish Watch">
-                            <div class="product-info">
-                                <p class="product-title">Analog Watches</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹175</span>
-                                    <span class="original-price">₹200</span>
-                                    <span class="discount">13% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">4.0 ⭐</span>
-                                    <span class="reviews-count">112045 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card">
-                            <img class="product-image" src="https://images.meesho.com/images/products/523788874/akyeh_512.avif?width=360" alt="Bluetooth Headphones">
-                            <div class="product-info">
-                                <p class="product-title">Modern Bluetooth Headphones</p>
-                                <div class="product-price">
-                                    <span class="current-price">₹380</span>
-                                    <span class="original-price">₹425</span>
-                                    <span class="discount">11% off</span>
-                                </div>
-                                <p class="free-delivery">Free Delivery</p>
-                                <div class="product-rating">
-                                    <span class="rating-value">3.9 ⭐</span>
-                                    <span class="reviews-count">24589 Reviews</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-            </div>
-            <div class="sc-gswNZR sc-hLBbgP JoMRc etQEgJ">
-                <div class="sc-dkrFOg dcFbbj"></div>
+                <div class="sc-gswNZR sc-hLBbgP JoMRc etQEgJ">
+                    <div class="sc-dkrFOg dcFbbj"></div>
+                </div>
             </div>
         </div>
     </div>
     <footer class="site-footer">
+        <!-- Product Detail Page (Initially Hidden) -->
+        <div id="productDetailPage" style="display: none;">
+            <div style="padding-top: 120px;">
+                <a href="#" class="back-to-home-btn" id="backButton">← Back to Home</a>
+                <div class="product-detail-container">
+                    <div class="product-image-gallery">
+                        <div class="thumbnail-column">
+                            <img class="thumbnail-image active" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=100" alt="Thumbnail 1">
+                            <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/ele73_512.avif?width=100" alt="Thumbnail 2">
+                            <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/9t7of_512.avif?width=100" alt="Thumbnail 3">
+                            <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/pfpss_512.avif?width=100" alt="Thumbnail 4">
+                        </div>
+                        <div class="main-image-column">
+                            <img class="main-product-image" id="mainImage" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=512" alt="Banita Refined Sarees">
+                        </div>
+                    </div>
+
+                    <div class="product-details-content">
+                        <h1>Banita Refined Sarees</h1>
+                        <div class="product-price-section">
+                            <span class="product-details-price">₹256</span>
+                            <span class="product-original-price">₹274</span>
+                            <span class="product-discount">7% off</span>
+                        </div>
+                        <div class="product-details-rating">
+                            <span class="details-rating-value">3.7 ⭐</span>
+                            <span class="details-reviews-count">22541 Ratings, 4757 Reviews</span>
+                        </div>
+                        
+                        <div class="size-selector">
+                            <h3>Select Size</h3>
+                            <button class="size-btn active">Free Size</button>
+                        </div>
+                        
+                        <h3 class="product-description-title">Product Details</h3>
+                        <div class="product-description-text">
+                            <p><strong>Name:</strong> Banita Refined Sarees</p>
+                            <p><strong>Saree Fabric:</strong> Lycra</p>
+                            <p><strong>Blouse:</strong> Running Blouse</p>
+                            <p><strong>Blouse Fabric:</strong> Banarasi Silk</p>
+                            <p><strong>Pattern:</strong> Printed</p>
+                            <p><strong>Net Quantity (N):</strong> Single</p>
+                            <p><strong>Sizes:</strong> Free Size (Saree: 5.5 m, Blouse: 0.8 m)</p>
+                            <p><strong>Country of Origin:</strong> India</p>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="action-btn add-to-cart-btn">Add to Cart</button>
+                            <button class="action-btn buy-now-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer-container">
             <div class="footer-column">
                 <h2>Shop Non-Stop on Meesho</h2>
@@ -1985,5 +2205,53 @@
             </div>
         </div>
     </footer>
+    <!-- JavaScript for Page Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const homePage = document.getElementById('homePage');
+            const productDetailPage = document.getElementById('productDetailPage');
+            const sareeProductCard = document.getElementById('sareeProduct');
+            const backButton = document.getElementById('backButton');
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail-image');
+
+            // Function to switch to Product Detail Page
+            function showProductPage() {
+                homePage.style.display = 'none';
+                productDetailPage.style.display = 'block';
+                window.scrollTo(0, 0); // Scroll to top
+            }
+
+            // Function to switch back to Home Page
+            function showHomePage() {
+                productDetailPage.style.display = 'none';
+                homePage.style.display = 'block';
+            }
+
+            // Event Listeners for page navigation
+            sareeProductCard.addEventListener('click', function(e) {
+                e.preventDefault();
+                showProductPage();
+            });
+
+            backButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                showHomePage();
+            });
+
+            // Event Listeners for image thumbnail gallery
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    // Update main image src
+                    // We use .replace to change the width parameter for a high-res image
+                    mainImage.src = this.src.replace('width=100', 'width=512');
+
+                    // Update active state for thumbnails
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
