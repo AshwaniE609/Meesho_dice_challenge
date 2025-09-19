@@ -1716,7 +1716,168 @@
         font-weight: 600;
     }
 
+    /* ========== VOICE ASSISTANT STYLES ========== */
+    #voice-assistant-fab {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        /* Increased size */
+        width: 70px;
+        height: 70px;
+        background-color: #9f2089;
+        border-radius: 50%;
+        /* Added a subtle border */
+        border: 2px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        /* Enhanced shadow for visibility */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 1000;
+        transition: transform 0.2s ease;
+    }
+    #voice-assistant-fab:hover {
+        transform: scale(1.1);
+    }
+    #voice-assistant-fab.listening {
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(159, 32, 137, 0.7); }
+        70% { box-shadow: 0 0 0 20px rgba(159, 32, 137, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(159, 32, 137, 0); }
+    }
+
+    #assistant-modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1001;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    .assistant-content {
+        background-color: #fff;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 480px; /* Slightly narrower */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .assistant-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        /* Themed header */
+        background-color: #9f2089; 
+        border-bottom: 1px solid #7d196c;
+    }
+    .assistant-header h3 {
+        margin: 0;
+        font-size: 18px;
+        /* White text on purple background */
+        color: #fff; 
+    }
+    #assistant-close-btn {
+        border: none;
+        background: none;
+        font-size: 28px;
+        cursor: pointer;
+        /* White close button */
+        color: #fff;
+        opacity: 0.8;
+    }
+    #assistant-close-btn:hover {
+        opacity: 1;
+    }
+    .assistant-body {
+        padding: 20px;
+        min-height: 250px; /* Increased height slightly */
+        display: flex;
+        flex-direction: column;
+        text-align: center; /* Center align content */
+    }
+    #assistant-status {
+        color: #555; /* Darker text for better readability */
+        font-style: normal; /* Changed from italic */
+        margin-bottom: 15px; /* Spacing below status */
+        min-height: 24px;
+        font-size: 16px;
+    }
+    #user-query-display, #assistant-response-display {
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 10px;
+        line-height: 1.5;
+        text-align: left; /* Keep text inside boxes left-aligned */
+    }
+    #user-query-display {
+        background-color: #f0f0f8;
+        align-self: flex-end; /* Align user query to the right */
+        max-width: 80%;
+    }
+    #assistant-response-display {
+        /* Themed response box */
+        background-color: #fdf4ff; 
+        border: 1px solid #f8e1f4;
+        align-self: flex-start; /* Align assistant response to the left */
+        max-width: 80%;
+    }
+    .language-selector-container {
+        display: flex;
+        justify-content: center; /* Center the language selector */
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    #language-select {
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+    /* New styles for the central mic button */
+    .assistant-mic-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #assistant-mic-btn {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: none;
+        background-color: #9f2089;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.2s;
+    }
+    #assistant-mic-btn:hover {
+        background-color: #7d196c;
+        transform: scale(1.05);
+    }
+    #assistant-mic-btn.listening {
+        animation: pulse 1.5s infinite;
+    }
+
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@1.43.1/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+
+
 </head>
 <body>
     <div id="__next">
@@ -2251,6 +2412,243 @@
                     this.classList.add('active');
                 });
             });
+        });
+    </script>
+    <div id="voice-assistant-fab">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32px" height="36px"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+    </div>
+
+    <div id="assistant-modal">
+        <div class="assistant-content">
+            <div class="assistant-header">
+                <h3>Meesho Voice Assistant</h3>
+                <button id="assistant-close-btn">&times;</button>
+            </div>
+            <div class="assistant-body">
+                <div class="language-selector-container">
+                    <label for="language-select">Language:</label>
+                    <select id="language-select">
+                        <option value="en-IN">English (India)</option>
+                        <option value="hi-IN">हिन्दी (Hindi)</option>
+                        <option value="mr-IN">मराठी (Marathi)</option>
+                        <option value="bn-IN">বাংলা (Bengali)</option>
+                        <option value="ta-IN">தமிழ் (Tamil)</option>
+                        <option value="te-IN">తెలుగు (Telugu)</option>
+                        <option value="gu-IN">ગુજરાતી (Gujarati)</option>
+                        <option value="pa-IN">ਪੰਜਾਬੀ (Punjabi)</option>
+                        <option value="ml-IN">മലയാളം (Malayalam)</option>
+                    </select>
+                </div>
+
+                <div id="assistant-results-container" style="display: flex; flex-direction: column; gap: 5px;">
+                    <div id="user-query-display"></div>
+                    <div id="assistant-response-display"></div>
+                </div>
+                
+                <div class="assistant-mic-container">
+                    <button id="assistant-mic-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="40px" height="40px"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+                    </button>
+                </div>
+
+                <div id="assistant-status">Press the microphone to start</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- IMPORTANT: REPLACE WITH YOUR KEYS ---
+            const AZURE_SPEECH_KEY = "By9Rp2NRPVfgeznHmDftjPs8LxZYksBGUDQljb5tT2p3oBD5srbxJQQJ99BGACGhslBXJ3w3AAAYACOGTvgC";
+            const AZURE_SPEECH_REGION = "centralindia"; // e.g., "eastus"
+            const PERPLEXITY_API_KEY = "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";
+
+            // -----------------------------------------
+
+            // DOM elements
+            const micBtn = document.getElementById('assistant-mic-btn');
+            const fab = document.getElementById('voice-assistant-fab');
+            const modal = document.getElementById('assistant-modal');
+            const closeBtn = document.getElementById('assistant-close-btn');
+            const statusDisplay = document.getElementById('assistant-status');
+            const queryDisplay = document.getElementById('user-query-display');
+            const responseDisplay = document.getElementById('assistant-response-display');
+            const languageSelect = document.getElementById('language-select');
+            
+            // --- Show/Hide Modal ---
+            const showModal = () => {
+                modal.style.display = 'flex';
+                statusDisplay.textContent = 'Press the microphone to start...';
+                queryDisplay.textContent = '';
+                responseDisplay.textContent = '';
+            };
+            const hideModal = () => {
+                modal.style.display = 'none';
+            };
+
+            fab.addEventListener('click', () => {
+                startAssistant();
+            });
+
+            // ADD THIS NEW EVENT LISTENER
+            micBtn.addEventListener('click', () => {
+                startAssistant();
+            });
+            
+            closeBtn.addEventListener('click', hideModal);
+
+            // --- Core Assistant Logic ---
+            async function startAssistant() {
+                // Add reference to the new mic button
+                const micBtn = document.getElementById('assistant-mic-btn');
+
+                // Clear previous results
+                queryDisplay.textContent = '';
+                responseDisplay.textContent = '';
+                queryDisplay.style.display = 'none';
+                responseDisplay.style.display = 'none';
+
+                fab.classList.add('listening');
+                micBtn.classList.add('listening'); // Animate the modal mic as well
+                showModal();
+                statusDisplay.textContent = 'Listening...';
+
+                try {
+                    const userQuery = await recognizeFromMicrophone(languageSelect.value);
+                    queryDisplay.textContent = `You said: "${userQuery}"`;
+                    queryDisplay.style.display = 'block'; // Show query
+                    statusDisplay.textContent = 'Thinking...';
+
+                    const perplexityResponse = await getPerplexityResponse(userQuery);
+                    responseDisplay.textContent = perplexityResponse;
+                    responseDisplay.style.display = 'block'; // Show response
+
+                    statusDisplay.textContent = 'Speaking...';
+                    await speakText(perplexityResponse, languageSelect.value);
+                    statusDisplay.textContent = 'Finished. Press the mic to ask again.';
+
+                } catch (error) {
+                    console.error("Assistant Error:", error);
+                    const errorMessage = `Sorry, I ran into an error: ${error}`;
+                    statusDisplay.textContent = errorMessage;
+                    await speakText("Sorry, I ran into an error.", "en-IN");
+                } finally {
+                    fab.classList.remove('listening');
+                    micBtn.classList.remove('listening'); // Stop modal mic animation
+                }
+            }
+            
+            // --- 1. Microsoft Azure: Speech-to-Text ---
+            function recognizeFromMicrophone(language) {
+                const speechConfig = SpeechSDK.SpeechConfig.fromSubscription(AZURE_SPEECH_KEY, AZURE_SPEECH_REGION);
+                speechConfig.speechRecognitionLanguage = language;
+                const audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
+                const recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+
+                return new Promise((resolve, reject) => {
+                    recognizer.recognizeOnceAsync(
+                        result => {
+                            if (result.reason === SpeechSDK.ResultReason.RecognizedSpeech) {
+                                resolve(result.text);
+                            } else {
+                                reject(result.errorDetails);
+                            }
+                            recognizer.close();
+                        },
+                        err => {
+                            reject(err);
+                            recognizer.close();
+                        }
+                    );
+                });
+            }
+            
+           
+            // --- 2. Perplexity API: Get Response ---
+            // --- 2. Perplexity API: Get Response ---
+            async function getPerplexityResponse(prompt) {
+                const apiEndpoint = "https://api.perplexity.ai/chat/completions";
+
+                const requestBody = {
+                    model: "sonar-pro", // Make sure this model name is correct
+                    messages: [
+                        // START OF ADDED SYSTEM PROMPT
+                        {
+                            role: "system",
+                            content: (
+                                "You are 'Meesho Voice Assistant,' a friendly and helpful AI guide for an e-commerce website giving short and pricise answers. " +
+                                "Your primary goal is to help users find products and navigate the site. " +
+                                "Always be polite and keep your answers concise (under 50 words if possible) and dont give highted respones in betwen also dont provide refrence numbers in answer " +
+                                "If a user asks about a product, suggest searching for it using the search bar. " +
+                                "If a user asks a question unrelated to shopping, politely steer them back by saying, 'I can only help with questions about our products and shopping on this site. How can I help you shop today?'"
+                            )
+                        },
+                        // END OF ADDED SYSTEM PROMPT
+                        {
+                            role: "user",
+                            content: prompt
+                        }
+                    ],
+                    max_tokens: 1000,
+                    temperature: 0.7
+                };
+
+                const response = await fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${PERPLEXITY_API_KEY}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Perplexity API error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data.choices[0].message.content;
+            }
+
+
+            // --- 3. Microsoft Azure: Text-to-Speech ---
+            function speakText(text, language) {
+                const speechConfig = SpeechSDK.SpeechConfig.fromSubscription(AZURE_SPEECH_KEY, AZURE_SPEECH_REGION);
+                // Configure voice based on language - you can customize these voices
+                const voiceMap = {
+                    'en-IN': 'en-IN-NeerjaNeural',
+                    'hi-IN': 'hi-IN-MadhurNeural',
+                    'mr-IN': 'mr-IN-AarohiNeural',
+                    'bn-IN': 'bn-IN-TanishaNeural',
+                    'ta-IN': 'ta-IN-PallaviNeural',
+                    'te-IN': 'te-IN-MohanNeural',
+                    'gu-IN': 'gu-IN-DhwaniNeural',
+                    'pa-IN': 'pa-IN-AseesNeural',
+                    'ml-IN': 'ml-IN-SobhanaNeural'
+                };
+                speechConfig.speechSynthesisVoiceName = voiceMap[language] || 'en-IN-NeerjaNeural';
+                
+                const synthesizer = new SpeechSDK.SpeechSynthesizer(speechConfig);
+
+                return new Promise((resolve, reject) => {
+                    synthesizer.speakTextAsync(
+                        text,
+                        result => {
+                            if (result.reason === SpeechSDK.ResultReason.SynthesizingAudioCompleted) {
+                                resolve();
+                            } else {
+                                reject(result.errorDetails);
+                            }
+                            synthesizer.close();
+                        },
+                        err => {
+                            reject(err);
+                            synthesizer.close();
+                        }
+                    );
+                });
+            }
         });
     </script>
 </body>
