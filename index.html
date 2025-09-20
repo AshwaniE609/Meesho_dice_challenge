@@ -1381,6 +1381,9 @@
         padding: 40px 64px;
         background-color: #fff;
         font-family: -apple-system, 'Helvetica Neue', sans-serif, 'Mier Book';
+        /* Override container constraints */
+        max-width: none !important;
+        width: 100% !important;
     }
 
     .product-section h2 {
@@ -1390,19 +1393,54 @@
         margin-bottom: 24px;
     }
 
+    /* === PASTE THIS CORRECTED CODE IN ITS PLACE === */
+
     .product-grid {
-        display: grid;
-        /* This creates a responsive grid that shows as many columns as fit */
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 20px;
+        justify-content: space-between;
     }
 
     .product-card {
+        flex: 0 0 calc(20% - 16px); /* 5 items per row with gaps */
         border: 1px solid #e0e0e0;
         border-radius: 8px;
         overflow: hidden;
         cursor: pointer;
         transition: box-shadow 0.2s ease-in-out;
+        min-width: 200px;
+        max-width: 250px;
+    }
+
+    @media (max-width: 1200px) {
+        .product-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .product-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
     }
 
     .product-card:hover {
@@ -1873,11 +1911,8 @@
     #assistant-mic-btn.listening {
         animation: pulse 1.5s infinite;
     }
-
     </style>
     <script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@1.43.1/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
-
-
 </head>
 <body>
     <div id="__next">
@@ -1907,6 +1942,12 @@
                         <div class="sc-iBYQkv hXDBdJ TabWrapper-sc-1edf3ww-0 clzpsA TabWrapper-sc-1edf3ww-0 clzpsA" color="white">
                             <span font-size="16px" font-weight="book" color="#353543" class="sc-eDvSVe gUjMRV Header__StyledCaption-sc-1qdannb-3 hikrEg hover Header__StyledCaption-sc-1qdannb-3 hikrEg hover">Become a Supplier</span>
                         </div>
+                        <a href="https://meesho-verify.netlify.app/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="sc-iBYQkv hXDBdJ TabWrapper-sc-1edf3ww-0 clzpsA TabWrapper-sc-1edf3ww-0 clzpsA" color="white">
+        <span font-size="16px" font-weight="book" color="#353543" class="sc-eDvSVe gUjMRV Header__StyledCaption-sc-1qdannb-3 hikrEg hover Header__StyledCaption-sc-1qdannb-3 hikrEg hover">Product Verification</span>
+    </div>
+</a>
+<div class="sc-gKPRtg Header__StyledDivider-sc-1qdannb-1 hzkztH euibuZ"></div>
                         <div class="sc-gKPRtg Header__StyledDivider-sc-1qdannb-1 hzkztH euibuZ"></div>
                         <div class="sc-iBYQkv hXDBdJ TabWrapper-sc-1edf3ww-0 clzpsA TabWrapper-sc-1edf3ww-0 clzpsA" color="white">
                             <span font-size="16px" font-weight="book" color="#353543" class="sc-eDvSVe gUjMRV Header__StyledCaption-sc-1qdannb-3 hikrEg hover Header__StyledCaption-sc-1qdannb-3 hikrEg hover">Investor Relations</span>
@@ -2083,24 +2124,31 @@
                     <section class="product-section">
                         <h2>Products For You</h2>
                         <div class="product-grid">
-                            <!-- Product 1 -->
-                            <div class="product-card" id="sareeProduct">
-                                <img class="product-image" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=360" alt="Voguish Saree">
+                            <div class="product-card" id="sareeProduct" >
+                               <div class="product-img-container" style="position:relative;">
+                                    <img class="product-image" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=360" alt="Voguish Saree" style="display:block;">
+                                    <img src="https://github.com/AshwaniE609/Meesho_virtual_cloth_try_on/blob/main/meesho_verified.png?raw=true"
+                                        alt="Meesho Verified"
+                                        class="meesho-tag-badge"
+                                        style="position:absolute; top:12px; right:12px; width:80px; height:30px; z-index:2;">
                                 <div class="product-info">
                                     <p class="product-title">Banita Refined Sarees</p>
+                                        
+                                     <div class="product-rating">
+                                         <span class="rating-value">3.9 ⭐</span>
+                                         <span class="reviews-count">39310 </span>
+                                     </div>
+
                                     <div class="product-price">
                                         <span class="current-price">₹330</span>
                                         <span class="original-price">₹365</span>
                                         <span class="discount">10% off</span>
+                                        
                                     </div>
                                     <p class="free-delivery">Free Delivery</p>
-                                    <div class="product-rating">
-                                        <span class="rating-value">3.9 ⭐</span>
-                                        <span class="reviews-count">39310 Reviews</span>
-                                    </div>
                                 </div>
                             </div>
-
+                        </div>
                             <div class="product-card">
                                 <img class="product-image" src="https://images.meesho.com/images/products/556144731/85wvr_512.avif?width=360" alt="Women Kurta">
                                 <div class="product-info">
@@ -2262,63 +2310,154 @@
                     <div class="sc-dkrFOg dcFbbj"></div>
                 </div>
             </div>
-        </div>
-    </div>
-    <footer class="site-footer">
-        <!-- Product Detail Page (Initially Hidden) -->
-        <div id="productDetailPage" style="display: none;">
-            <div style="padding-top: 120px;">
-                <a href="#" class="back-to-home-btn" id="backButton">← Back to Home</a>
-                <div class="product-detail-container">
-                    <div class="product-image-gallery">
-                        <div class="thumbnail-column">
-                            <img class="thumbnail-image active" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=100" alt="Thumbnail 1">
-                            <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/ele73_512.avif?width=100" alt="Thumbnail 2">
-                            <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/9t7of_512.avif?width=100" alt="Thumbnail 3">
-                            <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/pfpss_512.avif?width=100" alt="Thumbnail 4">
-                        </div>
-                        <div class="main-image-column">
-                            <img class="main-product-image" id="mainImage" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=512" alt="Banita Refined Sarees">
-                        </div>
+                <div id="productDetailPage" style="display: none;">
+        <div style="padding-top: 120px;">
+            <a href="#" class="back-to-home-btn" id="backButton">← Back to Home</a>
+            <div class="product-detail-container">
+                <div class="product-image-gallery">
+                    <div class="thumbnail-column">
+                        <img class="thumbnail-image active" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=100" alt="Thumbnail 1">
+                        <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/ele73_512.avif?width=100" alt="Thumbnail 2">
+                        <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/9t7of_512.avif?width=100" alt="Thumbnail 3">
+                        <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/pfpss_512.avif?width=100" alt="Thumbnail 4">
+                    </div>
+                    <div class="main-image-column">
+                        <img class="main-product-image" id="mainImage" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=512" alt="Banita Refined Sarees">
+                    </div>
+                </div>
+
+                <div class="product-details-content">
+                    <h1>Banita Refined Sarees</h1>
+                    <div class="product-price-section">
+                        <span class="product-details-price">₹256</span>
+                        <span class="product-original-price">₹274</span>
+                        <span class="product-discount">7% off</span>
+                    </div>
+                    <div class="product-details-rating">
+                        <span class="details-rating-value">3.7 ⭐</span>
+                        <span class="details-reviews-count">22541 Ratings, 4757 Reviews</span>
+                    </div>
+                    
+                    <div class="size-selector">
+                        <h3>Select Size</h3>
+                        <button class="size-btn active">Free Size</button>
+                    </div>
+                    
+                    <h3 class="product-description-title">Product Details</h3>
+                    <div class="product-description-text">
+                        <p><strong>Name:</strong> Banita Refined Sarees</p>
+                        <p><strong>Saree Fabric:</strong> Lycra</p>
+                        <p><strong>Blouse:</strong> Running Blouse</p>
+                        <p><strong>Blouse Fabric:</strong> Banarasi Silk</p>
+                        <p><strong>Pattern:</strong> Printed</p>
+                        <p><strong>Net Quantity (N):</strong> Single</p>
+                        <p><strong>Sizes:</strong> Free Size (Saree: 5.5 m, Blouse: 0.8 m)</p>
+                        <p><strong>Country of Origin:</strong> India</p>
                     </div>
 
-                    <div class="product-details-content">
-                        <h1>Banita Refined Sarees</h1>
-                        <div class="product-price-section">
-                            <span class="product-details-price">₹256</span>
-                            <span class="product-original-price">₹274</span>
-                            <span class="product-discount">7% off</span>
-                        </div>
-                        <div class="product-details-rating">
-                            <span class="details-rating-value">3.7 ⭐</span>
-                            <span class="details-reviews-count">22541 Ratings, 4757 Reviews</span>
-                        </div>
-                        
-                        <div class="size-selector">
-                            <h3>Select Size</h3>
-                            <button class="size-btn active">Free Size</button>
-                        </div>
-                        
-                        <h3 class="product-description-title">Product Details</h3>
-                        <div class="product-description-text">
-                            <p><strong>Name:</strong> Banita Refined Sarees</p>
-                            <p><strong>Saree Fabric:</strong> Lycra</p>
-                            <p><strong>Blouse:</strong> Running Blouse</p>
-                            <p><strong>Blouse Fabric:</strong> Banarasi Silk</p>
-                            <p><strong>Pattern:</strong> Printed</p>
-                            <p><strong>Net Quantity (N):</strong> Single</p>
-                            <p><strong>Sizes:</strong> Free Size (Saree: 5.5 m, Blouse: 0.8 m)</p>
-                            <p><strong>Country of Origin:</strong> India</p>
-                        </div>
-
-                        <div class="product-actions">
-                            <button class="action-btn add-to-cart-btn">Add to Cart</button>
-                            <button class="action-btn buy-now-btn">Buy Now</button>
-                        </div>
+                    <div class="product-actions">
+                        <button class="action-btn add-to-cart-btn">Add to Cart</button>
+                        <button class="action-btn buy-now-btn" id="buyNowButton">Buy Now</button>
                     </div>
+                    <div class="ai-review-container" style="margin-top: 24px; background: #f9f9ff; border-radius: 10px; padding: 18px 22px; box-shadow: 0 2px 10px rgba(159,32,137,0.05); font-size: 15px;">
+                    <strong style="color: #9f2089; font-size: 20px;">AI Review:</strong> 
+                    This saree is gorgeous! The black and red color combination is stunning, and the detailing is exquisite. It drapes beautifully and feels surprisingly comfortable.  However, the sheer nature might be a bit revealing for some.
+                    <br>Pros: Beautiful design, great drape, comfortable fabric.
+                    <br>Cons:  Sheerness may be a concern for some.
+                    <br>Overall,  it's a showstopper for special occasions.  I'd definitely recommend it for its unique style and luxurious feel.<br>
+                    <span style="color:#9f2089;">AI-Rating: 4.5/5 ⭐</span>
+                    </div>
+
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="checkoutPage" style="display:none;">
+        <div class="checkout-container" style="font-family: 'Mier Book', Arial, sans-serif; background: #fff; max-width: 1100px; margin: 48px auto 0; border-radius: 10px; box-shadow: 0 6px 28px 0 #2f233f14; padding: 48px 32px;">
+            <div style="display:flex; align-items:center; justify-content:center; margin-bottom:32px;">
+                <div style="width:300px; height:2px; background:#e0dcf6; position:relative;">
+                    <div style="width:95%; height:2px; background:#9f2089; position:absolute; left:0; top:0;"></div>
+                </div>
+                <span style="margin-left:16px; color:#9f2089;"><b>2</b></span>
+                <span style="margin-left:10px;">Payment</span>
+            </div>
+            <div style="display: flex; gap: 36px;">
+                <div style="flex:2;">
+                    <h2 style="font-size:22px; margin-bottom:24px;">Select Payment Method</h2>
+                    <div style="margin-bottom:24px;">
+                        <label style="display:block; background:#f6f7fc; border-radius:12px; padding:18px 30px; margin-bottom:20px; box-shadow:0 0 0 1px #ededf6;">
+                            <input type="radio" name="pay-method" checked style="margin-right:16px;">
+                            <span style="font-size:20px; font-weight:500;">₹245 <span style="margin-left:20px; font-size:18px;">Cash on Delivery</span> <span style="margin-left:10px;">🪙</span></span>
+                        </label>
+                        <label style="display:block; background:#f6f7fc; border-radius:12px; padding:18px 30px; box-shadow:0 0 0 1px #ededf6;">
+                            <input type="radio" name="pay-method" style="margin-right:16px;">
+                            <span style="font-size:20px; font-weight:500; color:#16a34a;">₹226</span>
+                            <span style="margin-left:10px;"><del style="color:#555;">₹245</del></span>
+                            <span style="margin-left:20px; font-size:18px;">Pay Online</span>
+                            <span style="margin-left:10px;">🇮🇳</span>
+                            <span style="margin-left:20px; color:#16a34a; font-size:16px;">Save ₹19</span>
+                            <div style="margin-top:10px; color:#16a34a; font-size:14px;">Extra discount with bank offers</div>
+                        </label>
+                    </div>
+                    <div style="margin-bottom:24px; background:#f6f7fc; border-radius:12px; padding:18px 30px; box-shadow:0 0 0 1px #ededf6;">
+                        <h3 style="font-size:18px; margin-bottom:12px;">Reselling the order?</h3>
+                        <p style="font-size:15px; color:#555; margin-bottom:18px;">Click on 'Yes' to add Final Price</p>
+                        <button style="background:#f8e9ff; color:#9f2089; padding:8px 24px; border-radius:24px; border:none; font-size:16px; margin-right:10px;">No</button>
+                        <button style="background:#fff; color:#9f2089; padding:8px 24px; border-radius:24px; border: 1px solid #ededf6; font-size:16px;">Yes</button>
+                    </div>
+                </div>
+                <div style="flex:1;">
+                    <h3 style="font-size:20px; margin-bottom:12px; color:#333;">Price Details (1 Items)</h3>
+                    <div style="font-size:16px;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                            <span><a href="#" style="color:#3f3e4e; text-decoration:underline;">Total Product Price</a></span>
+                            <span>+ ₹279</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:18px;">
+                            <span><a href="#" style="color:#16a34a; text-decoration:underline;">Total Discounts</a></span>
+                            <span style="color:#16a34a;">- ₹34</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:16px; font-size:18px; font-weight:500; color:#333;">
+                            <span>Order Total</span>
+                            <span>₹245</span>
+                        </div>
+                    </div>
+                    <div style="background:#e1f7ea; color:#16a34a; padding:10px 12px; border-radius:8px; font-size:16px; margin-bottom:22px;">
+                        ✓ Yay! Your total discount is ₹34
+                    </div>
+                    <button id="placeOrderBtn" style="width:100%; background:#9f2089; color:#fff; font-weight:600; font-size:20px; border:none; border-radius:10px; padding:18px 0; cursor:pointer;">
+                        Place Order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="otpSection" style="display:none;">
+        <div class="checkout-container" style="margin-top:40px;">
+            <p style="color:#9f2089;font-weight:500;font-size:20px;margin-bottom:24px;">OTP is sent to your mobile number</p>
+            <div style="display:flex;justify-content:center;gap:12px;margin-bottom:32px;">
+                <input class="otp-box" maxlength="1" style="width:48px;height:48px;font-size:26px;text-align:center;border:2px solid #eee;border-radius:8px;" />
+                <input class="otp-box" maxlength="1" style="width:48px;height:48px;font-size:26px;text-align:center;border:2px solid #eee;border-radius:8px;" />
+                <input class="otp-box" maxlength="1" style="width:48px;height:48px;font-size:26px;text-align:center;border:2px solid #eee;border-radius:8px;" />
+                <input class="otp-box" maxlength="1" style="width:48px;height:48px;font-size:26px;text-align:center;border:2px solid #eee;border-radius:8px;" />
+            </div>
+            <button id="confirmOtpBtn" style="background:#9f2089;color:#fff;font-weight:600;font-size:18px;border:none;border-radius:10px;padding:12px 32px;cursor:pointer;">Confirm</button>
+        </div>
+    </div>
+
+    <div id="successSection" style="display:none;">
+        <div class="checkout-container" style="margin-top:40px;text-align:center;">
+            <h2 style="color:#16a34a;margin-bottom:22px;">Your order is placed!</h2>
+            <p style="font-size:18px;color:#555;">Thank you for shopping with Meesho. You will receive a confirmation message soon.</p>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column">
                 <h2>Shop Non-Stop on Meesho</h2>
@@ -2366,7 +2505,69 @@
             </div>
         </div>
     </footer>
-    <!-- JavaScript for Page Navigation -->
+    <div id="productDetailPage" style="display: none;">
+        <div style="padding-top: 120px;">
+            <a href="#" class="back-to-home-btn" id="backButton">← Back to Home</a>
+            <div class="product-detail-container">
+                <div class="product-image-gallery">
+                    <div class="thumbnail-column">
+                        <img class="thumbnail-image active" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=100" alt="Thumbnail 1">
+                        <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/ele73_512.avif?width=100" alt="Thumbnail 2">
+                        <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/9t7of_512.avif?width=100" alt="Thumbnail 3">
+                        <img class="thumbnail-image" src="https://images.meesho.com/images/products/14622890/pfpss_512.avif?width=100" alt="Thumbnail 4">
+                    </div>
+                    <div class="main-image-column">
+                        <img class="main-product-image" id="mainImage" src="https://images.meesho.com/images/products/14622890/d86e5_512.avif?width=512" alt="Banita Refined Sarees">
+                    </div>
+                </div>
+
+                <div class="product-details-content">
+                    <h1>Banita Refined Sarees</h1>
+                    <div class="product-price-section">
+                        <span class="product-details-price">₹256</span>
+                        <span class="product-original-price">₹274</span>
+                        <span class="product-discount">7% off</span>
+                    </div>
+                    <div class="product-details-rating">
+                        <span class="details-rating-value">3.7 ⭐</span>
+                        <span class="details-reviews-count">22541 Ratings, 4757 Reviews</span>
+                    </div>
+                    
+                    <div class="size-selector">
+                        <h3>Select Size</h3>
+                        <button class="size-btn active">Free Size</button>
+                    </div>
+                    
+                    <h3 class="product-description-title">Product Details</h3>
+                    <div class="product-description-text">
+                        <p><strong>Name:</strong> Banita Refined Sarees</p>
+                        <p><strong>Saree Fabric:</strong> Lycra</p>
+                        <p><strong>Blouse:</strong> Running Blouse</p>
+                        <p><strong>Blouse Fabric:</strong> Banarasi Silk</p>
+                        <p><strong>Pattern:</strong> Printed</p>
+                        <p><strong>Net Quantity (N):</strong> Single</p>
+                        <p><strong>Sizes:</strong> Free Size (Saree: 5.5 m, Blouse: 0.8 m)</p>
+                        <p><strong>Country of Origin:</strong> India</p>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="action-btn add-to-cart-btn">Add to Cart</button>
+                        <button class="action-btn buy-now-btn" id="buyNowButton">Buy Now</button>
+                    </div>
+                    <div class="ai-review-container" style="margin-top: 24px; background: #f9f9ff; border-radius: 10px; padding: 18px 22px; box-shadow: 0 2px 10px rgba(159,32,137,0.05); font-size: 15px;">
+                    <strong style="color: #9f2089; font-size: 20px;">AI Review:</strong> 
+                    This saree is gorgeous! The black and red color combination is stunning, and the detailing is exquisite. It drapes beautifully and feels surprisingly comfortable.  However, the sheer nature might be a bit revealing for some.
+                    <br>Pros: Beautiful design, great drape, comfortable fabric.
+                    <br>Cons:  Sheerness may be a concern for some.
+                    <br>Overall,  it's a showstopper for special occasions.  I'd definitely recommend it for its unique style and luxurious feel.<br>
+                    <span style="color:#9f2089;">AI-Rating: 4.5/5 ⭐</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const homePage = document.getElementById('homePage');
@@ -2414,6 +2615,8 @@
             });
         });
     </script>
+    
+
     <div id="voice-assistant-fab">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32px" height="36px"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
     </div>
@@ -2455,7 +2658,6 @@
             </div>
         </div>
     </div>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -2564,8 +2766,7 @@
                 });
             }
             
-           
-            // --- 2. Perplexity API: Get Response ---
+            
             // --- 2. Perplexity API: Get Response ---
             async function getPerplexityResponse(prompt) {
                 const apiEndpoint = "https://api.perplexity.ai/chat/completions";
@@ -2651,5 +2852,37 @@
             }
         });
     </script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var buyBtn = document.getElementById('buyNowButton');
+            if (buyBtn) {
+                buyBtn.addEventListener('click', function() {
+                    if(document.getElementById('homePage')) document.getElementById('homePage').style.display = 'none';
+                    if(document.getElementById('productDetailPage')) document.getElementById('productDetailPage').style.display = 'none';
+                    if(document.getElementById('checkoutLoaderOverlay')) document.getElementById('checkoutLoaderOverlay').style.display = 'none';
+                    document.getElementById('checkoutPage').style.display = 'block';
+                });
+            }
+        });
+    </script>
+
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        var placeOrderBtn = document.getElementById('placeOrderBtn');
+        if (placeOrderBtn) {
+            placeOrderBtn.addEventListener('click', function() {
+                document.getElementById('checkoutPage').style.display = 'none';
+                document.getElementById('otpSection').style.display = 'block';
+            });
+        }
+        var confirmOtpBtn = document.getElementById('confirmOtpBtn');
+        if (confirmOtpBtn) {
+            confirmOtpBtn.addEventListener('click', function() {
+                document.getElementById('otpSection').style.display = 'none';
+                document.getElementById('successSection').style.display = 'block';
+            });
+        }
+    });</script>
 </body>
 </html>
